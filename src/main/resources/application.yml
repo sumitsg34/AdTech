@@ -1,0 +1,34 @@
+#h2 and database configurations
+spring:
+  datasource:
+    url: jdbc:h2:mem:vsdb
+    # uncomment below field if u want to store data on permanent files
+    #url: jdbc:h2:file:D:\Sample_codes\adtech\src\main\resources\service-db-2
+    driverClassName: org.h2.Driver
+    username: admin
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+  #To enable the console to access it use http://localhost:8080/h2-console  -- Use port value same like server.port
+  h2:
+    console:
+      settings.web-allow-others: true
+      enabled: true
+      webAllowOthers: true
+
+
+# server configurations
+server:
+  port: 9092
+  servlet:
+    context-path: /ads
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health
