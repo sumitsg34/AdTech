@@ -22,7 +22,6 @@ public class SwaggerConfig {
                 .apis(RequestHandlerSelectors.basePackage("com"))
                 .paths(PathSelectors.any())
                 .build().apiInfo(metaData())
-                //.pathMapping("/ads")
                 .useDefaultResponseMessages(false);
     }
 

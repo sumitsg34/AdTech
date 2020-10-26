@@ -1,3 +1,9 @@
+# server configurations
+server:
+  port: 9092
+  servlet:
+    context-path: /ads
+
 #h2 and database configurations
 spring:
   datasource:
@@ -19,16 +25,3 @@ spring:
       enabled: true
       webAllowOthers: true
 
-
-# server configurations
-server:
-  port: 9092
-  servlet:
-    context-path: /ads
-
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: info, health

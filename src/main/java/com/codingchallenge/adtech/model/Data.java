@@ -1,8 +1,9 @@
 package com.codingchallenge.adtech.model;
 
+import java.io.Serializable;
 import java.util.Map;
 
-public class Data {
+public class Data implements Serializable {
 
     private Map<String, String> fields;
     private Statistic stats;

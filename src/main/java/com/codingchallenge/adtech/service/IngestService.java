@@ -158,15 +158,4 @@ public class IngestService {
         }
     }
 
-
-    private <T> void buildAndSaveDocument(T object, EventTypeEnum eventTypeEnum) throws PlatformException {
-        ElasticEvent elasticEvent = new ElasticEvent();
-        BeanUtils.copyProperties(object, elasticEvent);
-
-        elasticEvent.setEventId(UUID.randomUUID());
-        elasticEvent.setEventType(eventTypeEnum);
-
-        elasticSearchService.saveDocument(elasticEvent);
-    }
-
 }

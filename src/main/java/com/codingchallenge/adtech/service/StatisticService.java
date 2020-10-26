@@ -127,7 +127,7 @@ public class StatisticService {
         if (start.after(end))
             throw new InvalidInputException("Start date is greater than end date");
         if (categories.isEmpty())
-            throw new InvalidInputException("No categories provided. Atleast one category should be provided");
+            throw new InvalidInputException("No categories provided. At least one category should be provided");
 
         // building aggregation query
         NativeSearchQuery searchQuery = buildAggregationQuery(start, end, categories);
